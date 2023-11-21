@@ -1,0 +1,120 @@
+.admin_layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  border-bottom: 1px solid #aeaeae;
+  padding: 0.5rem 0;
+}
+.header_content {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+.content > .component_menu {
+  width: 200px;
+  border-right: 1px solid #aeaeae;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: repeat(1, 1fr); */
+  gap: 1rem;
+}
+.content > .preview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview > .props_settings {
+  border-top: 1px solid #aeaeae;
+  min-height: 100px;
+  padding: 1rem;
+  flex-shrink: 1;
+}
+
+.preview > .preview_content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+}
+.preview > .preview_content > .analytics {
+  width: 300px;
+  margin-right: 1rem;
+}
+.preview > .preview_content > .analytics > p {
+  max-width: 100%;
+  line-break: anywhere;
+}
+.preview > .preview_content > .droppable_section {
+  flex: 1;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #aeaeae;
+}
+.preview > .preview_content > .droppable_section.dragging {
+  border-style: dashed;
+  position: relative;
+  /* background-color: #aeaeae; */
+}
+.preview > .preview_content > .droppable_section.dragging::before {
+  content: 'Drag here';
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+.preview > .preview_content > .droppable_section.dragging::after {
+  content: '';
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: #f9f9f9;
+}
+
+/* Content */
+.show_content {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  overflow-y: auto;
+}
+.show_content p {
+  text-align: center;
+  margin: 0;
+}
+.show_content button {
+  align-self: center;
+}
+
+.form_edit {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.form_edit > div {
+  display: flex;
+  flex-direction: column;
+}

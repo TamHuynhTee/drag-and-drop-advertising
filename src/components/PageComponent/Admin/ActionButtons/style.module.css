@@ -1,0 +1,23 @@
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions > button {
+  border: none;
+  border-radius: 0;
+  color: white;
+  background-color: orange;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.actions > button:hover {
+  background-color: rgb(224, 146, 0);
+}
